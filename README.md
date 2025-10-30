@@ -96,4 +96,5 @@ src/
 - Issues und Pull Requests sind willkommen. Bitte halte dich an den bestehenden Code‑Stil und konzentriere Änderungen auf klar umrissene Aufgaben.
 
 ## Lizenz
-- Open to use
+- Open to use, inspired by https://github.com/igorovh/fivem-player-list
+
