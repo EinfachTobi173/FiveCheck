@@ -17,6 +17,12 @@ Keine Identifikatoren gespeichert; Snapshots nur kurz im Speicher; Endpoints wer
 - Fortschrittsanzeige (Scan) und Ergebnis‑Gauge
 - „Report vorbereiten“ kopiert Text und öffnet das Support‑Formular
 
+Vorschau:
+
+https://imgur.com/a/XcCO6Sv
+
+https://imgur.com/a/nS4n7Ns
+
 ## Voraussetzungen
 - Node.js >= 18 (empfohlen: 18.17+)
 - npm >= 9
