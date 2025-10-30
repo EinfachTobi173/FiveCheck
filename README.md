@@ -1,6 +1,15 @@
 # FiveCheck
 
-Eine schlanke Next.js‑Web‑App zur Analyse deines Setups und zum Erstellen eines hilfreichen Support‑Reports. Enthält einen Fortschritts‑Scan, ein Heuristik‑Ergebnis mit Kreis‑Anzeige (Gauge), sowie einen Button „Report vorbereiten“, der die Reportdaten in die Zwischenablage kopiert und das Support‑Formular öffnet.
+FiveCheck analysiert FiveM/CFX‑Server auf mögliche Fake‑Spieler/Bots.
+
+Funktionsweise
+Es erfasst Snapshots der Spielerliste und wendet Heuristiken an (Sequence Match, Ping Cluster, Name Pattern, Session Spike, Historical Fingerprint), daraus werden Bots‑Schätzung und Confidence berechnet.
+
+Nutzung
+Servername, CFX‑Join‑Link, IP oder Server‑ID einfügen, Scan starten, Indikatoren prüfen und Report vorbereiten.
+
+Datenschutz
+Keine Identifikatoren gespeichert; Snapshots nur kurz im Speicher; Endpoints werden ausgeblendet.
 
 ## Features
 - Heuristik‑basierte Bewertung mit verständlichen Labels und Details
