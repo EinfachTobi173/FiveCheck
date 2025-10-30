@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg: #0b1020;
+  --glow: #60EFFF;
+  --accent: #9B5CFF;
+  --text: #E6EDF3;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.card {
+  position: relative;
+  border-radius: 0.75rem;
+  overflow: visible; /* allow tooltips to render outside card bounds */
+}
+
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0.75rem;
+  padding: 1px; /* border thickness */
+  background: linear-gradient(135deg, rgba(96, 239, 255, 0.6), rgba(155, 92, 255, 0.6));
+  pointer-events: none; /* allow clicks through overlay */
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+}
+
+.card > * { position: relative; z-index: 1; }
+
+.hover-glow {
+  transition: transform 150ms ease, box-shadow 150ms ease;
+}
+.hover-glow:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px rgba(96, 239, 255, 0.35), 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.neon-border {
+  box-shadow: 0 0 0 1px rgba(96, 239, 255, 0.3), 0 0 20px rgba(96, 239, 255, 0.5);
+}
+
+.focus-outline:focus {
+  outline: 2px solid var(--glow);
+  outline-offset: 2px;
+}
+
+.zebra > div:nth-child(odd) {
+  background: rgba(255,255,255,0.03);
+}
+
+.ping-high {
+  color: #FFC857;
+}
+.ping-very-high {
+  color: #E63946;
+  font-weight: 600;
+}
+
+/* Fancy progress fill with shimmer */
+.progress-fill {
+  background: linear-gradient(90deg, rgba(96, 239, 255, 0.9), rgba(155, 92, 255, 0.9));
+  box-shadow: 0 0 12px rgba(96, 239, 255, 0.5);
+  position: relative;
+}
+
+.progress-fill::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.25) 50%, rgba(255,255,255,0.0) 100%);
+  animation: shimmer 1.2s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
